@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.example.view.AsistentForm">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="678" height="612"/>
+    </constraints>
+    <properties>
+      <background color="-2383653"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="3475f" layout-manager="GridLayoutManager" row-count="17" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-2383653"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="91173" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Castellar" size="24" style="1"/>
+              <foreground color="-7667573"/>
+              <text value="Asistent"/>
+            </properties>
+          </component>
+          <component id="5caae" class="javax.swing.JLabel" binding="iconLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="images/asistent.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="f6382" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Vizualizare Fise Medicale"/>
+            </properties>
+          </component>
+          <component id="71765" class="javax.swing.JTextArea" binding="vizualizareFiseTextArea">
+            <constraints>
+              <grid row="4" column="0" row-span="13" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="ff081" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Actualizare Fisa Medicala"/>
+            </properties>
+          </component>
+          <component id="983ec" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="ID Fisa"/>
+            </properties>
+          </component>
+          <component id="5cbb6" class="javax.swing.JTextField" binding="idFisaUpdateTextField">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="5e9fa" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Varsta Pacient"/>
+            </properties>
+          </component>
+          <component id="b059a" class="javax.swing.JTextField" binding="varstaPacientUpdateTextField">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="9ccb1" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Creare Fisa Medicala"/>
+            </properties>
+          </component>
+          <component id="66618" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Medic Apartinator"/>
+            </properties>
+          </component>
+          <component id="a8dc8" class="javax.swing.JTextField" binding="medicUpdateTextField">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="10098" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Asistent Apartinator"/>
+            </properties>
+          </component>
+          <component id="f6da8" class="javax.swing.JTextField" binding="asistentUpdateTextField">
+            <constraints>
+              <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="3faa" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+              <text value="Diagnostic"/>
+            </properties>
+          </component>
+          <component id="335" class="javax.swing.JTextField" binding="diagnosticCreateTextField">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="22c9d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Tratament"/>
+            </properties>
+          </component>
+          <component id="bccca" class="javax.swing.JTextField" binding="tratamentCreateTextField">
+            <constraints>
+              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="52a21" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Simptome"/>
+            </properties>
+          </component>
+          <component id="1ee1a" class="javax.swing.JTextField" binding="simptomeCreateTextField">
+            <constraints>
+              <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="a436d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Varsta Pacient"/>
+            </properties>
+          </component>
+          <component id="3b2ab" class="javax.swing.JTextField" binding="varstaPacientCreateTextField">
+            <constraints>
+              <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="1791a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Medic Apartinator"/>
+            </properties>
+          </component>
+          <component id="679bd" class="javax.swing.JTextField" binding="medicCreateTextField">
+            <constraints>
+              <grid row="13" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="4488" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Asistent Apartinator"/>
+            </properties>
+          </component>
+          <component id="cba0b" class="javax.swing.JTextField" binding="asistentCreateTextField">
+            <constraints>
+              <grid row="15" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="40d14" class="javax.swing.JButton" binding="creareFisaButton" default-binding="true">
+            <constraints>
+              <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+              <text value="Creare Fisa"/>
+            </properties>
+          </component>
+          <component id="b4db8" class="javax.swing.JButton" binding="actualizareFisaButton" default-binding="true">
+            <constraints>
+              <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+              <text value="Actualizare Fisa"/>
+            </properties>
+          </component>
+          <component id="5b6b8" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Stergere Fisa"/>
+            </properties>
+          </component>
+          <component id="e441" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="ID Fisa"/>
+            </properties>
+          </component>
+          <component id="516bb" class="javax.swing.JTextField" binding="idFisaDeleteTextField">
+            <constraints>
+              <grid row="15" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="2534a" class="javax.swing.JButton" binding="stergereFisaButton" default-binding="true">
+            <constraints>
+              <grid row="16" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+              <text value="Stergere Fisa"/>
+            </properties>
+          </component>
+          <component id="8fbfa" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Filtrare Pacienti"/>
+            </properties>
+          </component>
+          <component id="5e730" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Medic"/>
+            </properties>
+          </component>
+          <component id="853ce" class="javax.swing.JComboBox" binding="filtrarePacientiMedicComboBox">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="26090" class="javax.swing.JComboBox" binding="filtrarePacientiVarstaComboBox">
+            <constraints>
+              <grid row="13" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="13113" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+              <text value="Varsta"/>
+            </properties>
+          </component>
+          <component id="80819" class="javax.swing.JTextArea" binding="filtrarePacientiMedicTextArea">
+            <constraints>
+              <grid row="6" column="3" row-span="2" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="78d88" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Diagnostic"/>
+            </properties>
+          </component>
+          <component id="3c952" class="javax.swing.JComboBox" binding="filtrarePacientiDiagnosticComboBox">
+            <constraints>
+              <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="f0a51" class="javax.swing.JTextArea" binding="filtrarePacientiDiagnosticTextArea">
+            <constraints>
+              <grid row="10" column="3" row-span="2" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="b8928" class="javax.swing.JTextArea" binding="filtrarePacientiVarstaTextArea">
+            <constraints>
+              <grid row="14" column="3" row-span="2" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="ebc5a" class="javax.swing.JButton" binding="LOGOUTButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+              <text value="LOG OUT"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <hspacer id="fce33">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="3cef6">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="ff403">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="b0b9f">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+    </children>
+  </grid>
+</form>

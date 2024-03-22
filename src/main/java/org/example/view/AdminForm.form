@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.example.view.AdminForm">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="717" height="420"/>
+    </constraints>
+    <properties>
+      <background color="-2514727"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="ca0a6" layout-manager="GridLayoutManager" row-count="11" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-2514727"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="86b2" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Castellar" size="22" style="1"/>
+              <foreground color="-7667573"/>
+              <text value="ADMIN"/>
+            </properties>
+          </component>
+          <component id="2c498" class="javax.swing.JLabel" binding="iconLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <icon value="images/administrator.png"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="5dcd8" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Vizualizare Utilizatori"/>
+            </properties>
+          </component>
+          <component id="67868" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Creare Utilizator"/>
+            </properties>
+          </component>
+          <component id="65041" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Actualizare Utilizator"/>
+            </properties>
+          </component>
+          <component id="40db" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-13893586"/>
+              <text value="Stergere Utilizator"/>
+            </properties>
+          </component>
+          <component id="319c4" class="javax.swing.JTextArea" binding="vizualizareUtilizatoritextArea">
+            <constraints>
+              <grid row="4" column="0" row-span="6" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="d289d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Username"/>
+            </properties>
+          </component>
+          <component id="95a63" class="javax.swing.JTextField" binding="usernameCreareUtilizatorTextField">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="b14a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Password"/>
+            </properties>
+          </component>
+          <component id="99e06" class="javax.swing.JTextField" binding="passwordCreareUtilizatorTextField">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="905c9" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Tip Utilizator (2 : medic ; 3 : asistent)"/>
+            </properties>
+          </component>
+          <component id="9d6ec" class="javax.swing.JTextField" binding="tipUtilizatorCreareTextField">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="e74b0" class="javax.swing.JButton" binding="creareUtilizatorButton">
+            <constraints>
+              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+              <text value="Creare"/>
+            </properties>
+          </component>
+          <component id="231ed" class="javax.swing.JButton" binding="vizualizareUtilizatoriButton">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+              <text value="Vizualizare"/>
+            </properties>
+          </component>
+          <component id="a0e26" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="ID Utilizator"/>
+            </properties>
+          </component>
+          <component id="27be6" class="javax.swing.JTextField" binding="idUtilizatorUpdateTextField">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="f8461" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Username"/>
+            </properties>
+          </component>
+          <component id="9fb8b" class="javax.swing.JTextField" binding="usernameUtilizatorUpdateTextField">
+            <constraints>
+              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="9da24" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="Password"/>
+            </properties>
+          </component>
+          <component id="9deb7" class="javax.swing.JButton" binding="actualizareUtilizatorButton">
+            <constraints>
+              <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2461482"/>
+              <foreground color="-7667573"/>
+              <text value="Actualizare"/>
+            </properties>
+          </component>
+          <component id="40394" class="javax.swing.JTextField" binding="passwordUpdateUtilizatorTextField">
+            <constraints>
+              <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="3788b" class="javax.swing.JButton" binding="stergereButton" default-binding="true">
+            <constraints>
+              <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+              <text value="Stergere"/>
+            </properties>
+          </component>
+          <component id="7eb6" class="javax.swing.JTextField" binding="idUtilizatorStergereTextField">
+            <constraints>
+              <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-2526763"/>
+              <foreground color="-7667573"/>
+            </properties>
+          </component>
+          <component id="ae485" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7667573"/>
+              <text value="ID Utilizator"/>
+            </properties>
+          </component>
+          <component id="921c5" class="javax.swing.JButton" binding="LOGOUTButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-2395946"/>
+              <foreground color="-7667573"/>
+              <text value="LOG OUT"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <hspacer id="ee8ef">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="b5534">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="ee736">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="c9ba2">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+    </children>
+  </grid>
+</form>
