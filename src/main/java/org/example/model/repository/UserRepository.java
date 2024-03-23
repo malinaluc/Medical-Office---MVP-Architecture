@@ -1,14 +1,13 @@
 package org.example.model.repository;
 
-///implementare CRUD
-
-
 import org.example.model.entity.User;
 
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+
+import static org.example.utils.ExtensionFunctions.logDebug;
 
 public class UserRepository extends AbstractRepository<User> {
 
@@ -21,9 +20,7 @@ public class UserRepository extends AbstractRepository<User> {
             TypedQuery<User> query = session.createQuery(cq);
             return query.getSingleResult();
         } catch (Exception e) {
-            System.out.println("EXCEPTIE IN getUserByEmailAndPassword ");
-            e.printStackTrace();
-
+            logDebug("---getUserByEmailAndPassword--- " + e);
         }
         return null;
     }

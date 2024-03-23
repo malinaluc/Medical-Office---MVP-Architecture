@@ -11,7 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-
 @Entity
 @Component
 @Getter
@@ -24,9 +23,13 @@ public class User {
     private Integer idUser;
     private String username;
     private String password;
-
+    /**
+     * Role of the sure.
+     * Possible values:
+     * 1 -> Administrator
+     * 2 -> Medic
+     * 3 -> Assistant
+     */
     @NotNull
-    private Integer rol; /// 1-> administrator ; 2->medic ; 3->asistent
-
-
+    private Integer rol;
 }

@@ -3,27 +3,21 @@
         "-//Hibernate/Hibernate Configuration DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
+
     <session-factory>
-
-        <property name="hbm2ddl.auto">update</property>
-        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver
-        </property> <!-- am modificat din com.mysql.jdbc.Driver-->
-        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/CabinetMedical</property>
-
-        <!--Replace with your MySQL username and password-->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/cabinetmedical</property>
         <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">cutucutumiau</property>
-
-
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.connection.password">12345Aa!</property>
+        <property name="connection.pool_size">3</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="current_session_context_class">thread</property>
         <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <!--    Map Java Class to DB Entity-->
-
-        <mapping class="org.example.model.entity.User"/>
-        <mapping class="org.example.model.entity.Medic"/>
-        <mapping class="org.example.model.entity.FisaMedicala"/>
-
-
+        <mapping resource="user.hbm.xml"/>
     </session-factory>
+
 </hibernate-configuration>

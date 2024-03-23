@@ -13,6 +13,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
 
+import static org.example.utils.ExtensionFunctions.logDebug;
+
 
 public class Login implements InterfaceLogin {
 
@@ -43,6 +45,7 @@ public class Login implements InterfaceLogin {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                logDebug("I have performed an action...");
                 ///logica la apasarea butonului o implementez in presenter
 
                 handleLoginAction();
@@ -58,7 +61,6 @@ public class Login implements InterfaceLogin {
     @Override
     public void handleLoginAction() {
         loginPresenter.handleLoginAction();
-
     }
 
     @Override
@@ -102,7 +104,7 @@ public class Login implements InterfaceLogin {
         panel2.setBackground(new Color(-2252579));
         panel1.add(panel2, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         loginLabel = new JLabel();
-        Font loginLabelFont = this.$$$getFont$$$("Castellar", Font.BOLD, 22, loginLabel.getFont());
+        Font loginLabelFont = this.getFont("Castellar", Font.BOLD, 22, loginLabel.getFont());
         if (loginLabelFont != null) loginLabel.setFont(loginLabelFont);
         loginLabel.setForeground(new Color(-7667573));
         loginLabel.setText("Login");
@@ -140,10 +142,7 @@ public class Login implements InterfaceLogin {
         panel1.add(spacer4, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
     }
 
-    /**
-     * @noinspection ALL
-     */
-    private Font $$$getFont$$$(String fontName, int style, int size, Font currentFont) {
+    private Font getFont(String fontName, int style, int size, Font currentFont) {
         if (currentFont == null) return null;
         String resultName;
         if (fontName == null) {

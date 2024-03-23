@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="org.example.model.entity.User" table="User">
+        <id name="idUser">
+            <generator class="assigned"/>
+        </id>
+
+        <property name="username"/>
+        <property name="password"/>
+        <property name="rol"/>
+    </class>
+</hibernate-mapping>

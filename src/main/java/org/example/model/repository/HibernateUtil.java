@@ -5,19 +5,29 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-// ofera o sesiune Hibernate configurata
-// ofera un mod simplu si reutilizabil de a accesa si gestiona sesiunile
-// Hibernate intr-o aplicatie Java, fara a fi nevoie sa se creeze o noua
-// instanta de SessionFactory in fiecare loc in care este necesara
-// o sesiune Hibernate
+import static org.example.utils.ExtensionFunctions.logDebug;
+
+/**
+ * ofera o sesiune Hibernate configurata
+ * ofera un mod simplu si reutilizabil de a accesa si gestiona sesiunile
+ * Hibernate intr-o aplicatie Java, fara a fi nevoie sa se creeze o noua
+ * instanta de SessionFactory in fiecare loc in care este necesara
+ * o sesiune Hibernate
+ */
 public class HibernateUtil {
-    // utilizat pentru a crea sesiuni Hibernate si pentru a gestiona
-    // cache-ul, conexiunile la baza de date si alte resurse
+    /**
+     * utilizat pentru a crea sesiuni Hibernate si pentru a gestiona
+     * cache-ul, conexiunile la baza de date si alte resurse
+     */
     private static SessionFactory sessionFactory;
 
-    // daca obiectul sessionFactory nu este inca initializat, atunci
-    // se creeaza o noua instanta folosing configurarea implicita
-    // din fisierul hibernate.cfg.xml
+    /**
+     * daca obiectul sessionFactory nu este inca initializat, atunci
+     * se creeaza o noua instanta folosing configurarea implicita
+     * din fisierul hibernate.cfg.xml
+     *
+     * @return
+     */
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
@@ -26,14 +36,18 @@ public class HibernateUtil {
                 StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
                 sessionFactory = new MetadataSources(serviceRegistry).buildMetadata().buildSessionFactory();
             } catch (Exception e) {
-                e.printStackTrace();
+                logDebug("getSessionFactory exception = " + e);
             }
         }
         return sessionFactory;
     }
 
-    // se foloseste pentru testare
-    // permite setarea unui obiect SessionFactory personalizat
+    /**
+     * se foloseste pentru testare
+     * permite setarea unui obiect SessionFactory personalizat
+     *
+     * @param sessionFactory
+     */
     public static void setSessionFactory(SessionFactory sessionFactory) {
         HibernateUtil.sessionFactory = sessionFactory;
     }

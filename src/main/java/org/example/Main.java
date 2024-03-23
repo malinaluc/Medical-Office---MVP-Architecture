@@ -7,6 +7,11 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
+//        StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
+//        Metadata metadata = new MetadataSources(ssr).getMetadataBuilder().build();
+
+//        SessionFactory factory = metadata.getSessionFactoryBuilder().build();
+//        Session session = factory.openSession();
 
         SwingUtilities.invokeLater(new Runnable() {
             @Override

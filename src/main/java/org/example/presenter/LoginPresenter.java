@@ -7,6 +7,8 @@ import org.example.view.MedicForm;
 
 import javax.swing.*;
 
+import static org.example.utils.ExtensionFunctions.logDebug;
+
 
 public class LoginPresenter {
 
@@ -25,9 +27,10 @@ public class LoginPresenter {
 
         User user = userRepository.getUserByEmailAndPassword(username, password);
 
-        System.out.println("LOG : Username = " + username + " and Password = " + password);
-        if (user != null) System.out.println(user.getUsername() + " " + user.getPassword());
-        else
+        logDebug("Username = " + username + " and Password = " + password);
+        if (user != null) {
+            System.out.println(user.getUsername() + " " + user.getPassword());
+        } else
             JOptionPane.showMessageDialog(null, "Wrong username or password", "Error Message", JOptionPane.INFORMATION_MESSAGE);
     }
 
