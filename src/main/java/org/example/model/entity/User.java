@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -19,12 +20,12 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUser;
     private String username;
     private String password;
     /**
-     * Role of the sure.
+     * Role of the user.
      * Possible values:
      * 1 -> Administrator
      * 2 -> Medic

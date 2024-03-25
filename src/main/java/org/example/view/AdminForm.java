@@ -10,7 +10,7 @@ import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.util.Locale;
 
-public class AdminForm {
+public class AdminForm implements InterfaceAdmin {
     private JPanel panel1;
     private JLabel iconLabel;
     private JTextArea vizualizareUtilizatoritextArea;
@@ -32,6 +32,11 @@ public class AdminForm {
 // >>> IMPORTANT!! <<<
 // DO NOT EDIT OR ADD ANY CODE HERE!
         $$$setupUI$$$();
+    }
+
+    @Override
+    public JPanel getPanel1() {
+        return panel1;
     }
 
     /**

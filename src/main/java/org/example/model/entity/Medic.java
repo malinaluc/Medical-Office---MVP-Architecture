@@ -16,11 +16,11 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Medic {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMedic;
     private String nume;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "idUser")
     private User idUser;
 }

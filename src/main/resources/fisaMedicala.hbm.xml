@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-mapping>
+    <class name="org.example.model.entity.FisaMedicala" table="fisamedicala">
+        <id name="idFisaMedicala">
+            <generator class="assigned"/>
+        </id>
+        <property name="diagnostic"/>
+        <property name="simptome"/>
+        <property name="tratament"/>
+        <property name="varstaPacient" type="integer"/>
+        <!-- Many-to-one association with Medic entity -->
+        <many-to-one name="idMedic" class="org.example.model.entity.Medic">
+            <column name="idMedic"/>
+        </many-to-one>
+        <!-- Many-to-one association with User entity -->
+        <many-to-one name="idAsistent" class="org.example.model.entity.User">
+            <column name="idAsistent"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

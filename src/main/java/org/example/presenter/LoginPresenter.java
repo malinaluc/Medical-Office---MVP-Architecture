@@ -2,6 +2,9 @@ package org.example.presenter;
 
 import org.example.model.entity.User;
 import org.example.model.repository.UserRepository;
+import org.example.utils.SessionManager;
+import org.example.view.AdminForm;
+import org.example.view.AsistentForm;
 import org.example.view.InterfaceLogin;
 import org.example.view.MedicForm;
 
@@ -13,6 +16,7 @@ import static org.example.utils.ExtensionFunctions.logDebug;
 public class LoginPresenter {
 
     private InterfaceLogin interfaceLogin;
+
 
     private UserRepository userRepository = new UserRepository();
 
@@ -29,7 +33,13 @@ public class LoginPresenter {
 
         logDebug("Username = " + username + " and Password = " + password);
         if (user != null) {
-            System.out.println(user.getUsername() + " " + user.getPassword());
+
+            SessionManager.loginUser(user.getIdUser(), user.getUsername(), user.getPassword());
+            if (user.getIdUser() == 2) showMedicForm();
+            else if (user.getIdUser() == 1) showAdminForm();
+            else showAsistentForm();
+            ///System.out.println(user.getUsername() + " " + user.getPassword());
+
         } else
             JOptionPane.showMessageDialog(null, "Wrong username or password", "Error Message", JOptionPane.INFORMATION_MESSAGE);
     }
@@ -47,5 +57,30 @@ public class LoginPresenter {
         medicFrame.setVisible(true);
     }
 
+    public void showAdminForm() {
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(interfaceLogin.getPanel1());
+        frame.setVisible(false);
+        AdminForm adminForm = new AdminForm();
+        JFrame adminFrame = new JFrame("Admin Form");
+        adminFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        adminFrame.getContentPane().add(adminForm.getPanel1());
+        adminFrame.setSize(700, 700);
+        adminFrame.setLocationRelativeTo(null);
+        adminFrame.setVisible(true);
+
+
+    }
+
+    public void showAsistentForm() {
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(interfaceLogin.getPanel1());
+        frame.setVisible(false);
+        AsistentForm asistentForm = new AsistentForm();
+        JFrame asistentFrame = new JFrame("Asistent Frame");
+        asistentFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        asistentFrame.getContentPane().add(asistentForm.getPanel1());
+        asistentFrame.setSize(700, 700);
+        asistentFrame.setLocationRelativeTo(null);
+        asistentFrame.setVisible(true);
+    }
 }
 

@@ -17,8 +17,8 @@ import javax.persistence.*;
 public class FisaMedicala {
 
     @Id
-    @GeneratedValue
-    private Long idFisaMedicala;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idFisaMedicala; //modified from Long
     private String diagnostic;
     private String simptome;
     private String tratament;
@@ -26,7 +26,7 @@ public class FisaMedicala {
 
     @ManyToOne
     @JoinColumn(name = "idMedic", referencedColumnName = "idMedic")
-    private User idMedic;
+    private Medic idMedic;
 
     @ManyToOne
     @JoinColumn(name = "idAsistent", referencedColumnName = "idUser")

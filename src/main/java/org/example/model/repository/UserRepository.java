@@ -24,4 +24,10 @@ public class UserRepository extends AbstractRepository<User> {
         }
         return null;
     }
+
+    public User findByID(Integer userID) {
+        return findById(userID);
+    }
+
+
 }

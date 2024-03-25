@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-mapping>
+    <class name="org.example.model.entity.Medic" table="medic">
+        <id name="idMedic" type="java.lang.Integer">
+            <column name="idMedic"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nume" type="string">
+            <column name="nume"/>
+        </property>
+        <!-- Many-to-one association with User entity -->
+        <many-to-one name="idUser" class="org.example.model.entity.User">
+            <column name="idUser"/>
+        </many-to-one>
+    </class>
+
+</hibernate-mapping>
