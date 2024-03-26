@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
-    <class name="org.example.model.entity.User" table="User">
-        <id name="idUser">
-            <generator class="assigned"/>
+<hibernate-mapping>
+    <class name="org.example.model.entity.User" table="user">
+        <id name="idUser" type="java.lang.Integer">
+            <column name="idUser"/>
+            <generator class="identity"/>
         </id>
 
         <property name="username"/>

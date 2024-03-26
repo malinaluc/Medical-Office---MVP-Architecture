@@ -34,5 +34,7 @@ public interface InterfaceMedic {
 
     void handleFilterByTratament();
 
+    void handleLogOutAction();
+
 
 }

@@ -14,7 +14,6 @@ import java.util.List;
 import static org.example.utils.ExtensionFunctions.logDebug;
 
 
-//operatiile CRUD
 public class FisaMedicalaRepository extends AbstractRepository<FisaMedicala> {
 
     public List<FisaMedicala> allFisaMedicalaByMedicUserId(Integer userId) {

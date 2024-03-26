@@ -61,4 +61,6 @@ public interface InterfaceAsistent {
 
     void handleCreateFisa();
 
+    void handleLogOut();
+
 }

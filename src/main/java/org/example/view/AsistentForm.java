@@ -97,6 +97,17 @@ public class AsistentForm implements InterfaceAsistent {
                 handleCreateFisa();
             }
         });
+        LOGOUTButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleLogOut();
+            }
+        });
+    }
+
+    @Override
+    public void handleLogOut() {
+        asistentPresenter.handleLogOut();
     }
 
     @Override

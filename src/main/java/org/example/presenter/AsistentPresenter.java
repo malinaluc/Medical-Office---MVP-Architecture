@@ -3,15 +3,15 @@ package org.example.presenter;
 import org.example.model.entity.FisaMedicala;
 import org.example.model.entity.Medic;
 import org.example.model.entity.User;
-import org.example.model.repository.AsistentRepository;
 import org.example.model.repository.FisaMedicalaRepository;
 import org.example.model.repository.MedicRepository;
 import org.example.model.repository.UserRepository;
 import org.example.utils.LoggedInUser;
 import org.example.utils.SessionManager;
 import org.example.view.InterfaceAsistent;
+import org.example.view.Login;
 
-import java.util.ArrayList;
+import javax.swing.*;
 import java.util.HashSet;
 import java.util.List;
 
@@ -20,7 +20,6 @@ import static org.example.utils.ExtensionFunctions.logDebug;
 public class AsistentPresenter {
 
     private InterfaceAsistent interfaceAsistent;
-    private AsistentRepository asistentRepository = new AsistentRepository();
     private FisaMedicalaRepository fisaMedicalaRepository = new FisaMedicalaRepository();
 
     private UserRepository userRepository = new UserRepository();
@@ -75,7 +74,7 @@ public class AsistentPresenter {
         Integer idUserLoggedIn = loggedInUser.getIdUserLoggedIn();
         List<FisaMedicala> allFisaMedicala = fisaMedicalaRepository.allFisaMedicalaByUserId(loggedInUser.getIdUserLoggedIn());
 
-        List<String> diagnostics = new ArrayList<>();
+        HashSet<String> diagnostics = new HashSet<>();
 
         for (FisaMedicala fisaMedicala : allFisaMedicala) {
             diagnostics.add(fisaMedicala.getDiagnostic());
@@ -184,7 +183,7 @@ public class AsistentPresenter {
         newFisaMedicala.setVarstaPacient(varsta);
         newFisaMedicala.setIdMedic(newMedic);
         newFisaMedicala.setIdAsistent(newAsistent);
-        newFisaMedicala.setIdFisaMedicala(4);
+//        newFisaMedicala.setIdFisaMedicala(4);
 
         try {
             fisaMedicalaRepository.save(newFisaMedicala);
@@ -193,6 +192,20 @@ public class AsistentPresenter {
         }
 
 
+    }
+
+    public void handleLogOut() {
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(interfaceAsistent.getPanel1());
+        frame.setVisible(false);
+        Login loginForm = new Login();
+        JFrame loginFrame = new JFrame("Login Form");
+        loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        loginFrame.getContentPane().add(loginForm.getPanel1()); // Add the JPanel from Login to the JFrame
+        loginFrame.setSize(700, 700);
+        loginFrame.setLocationRelativeTo(null); // Center the frame on the screen
+        loginFrame.setVisible(true); // Make the frame visible
+
+        SessionManager.logOutUser();
     }
 
 }

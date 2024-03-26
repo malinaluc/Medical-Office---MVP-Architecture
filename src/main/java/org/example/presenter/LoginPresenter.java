@@ -17,7 +17,6 @@ public class LoginPresenter {
 
     private InterfaceLogin interfaceLogin;
 
-
     private UserRepository userRepository = new UserRepository();
 
     public LoginPresenter(InterfaceLogin interfaceLogin) {
@@ -35,8 +34,8 @@ public class LoginPresenter {
         if (user != null) {
 
             SessionManager.loginUser(user.getIdUser(), user.getUsername(), user.getPassword());
-            if (user.getIdUser() == 2) showMedicForm();
-            else if (user.getIdUser() == 1) showAdminForm();
+            if (user.getRol() == 2) showMedicForm();
+            else if (user.getRol() == 1) showAdminForm();
             else showAsistentForm();
             ///System.out.println(user.getUsername() + " " + user.getPassword());
 

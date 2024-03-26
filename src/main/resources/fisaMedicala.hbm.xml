@@ -3,8 +3,9 @@
 
 <hibernate-mapping>
     <class name="org.example.model.entity.FisaMedicala" table="fisamedicala">
-        <id name="idFisaMedicala">
-            <generator class="assigned"/>
+        <id name="idFisaMedicala" type="java.lang.Integer">
+            <column name="idFisaMedicala"/>
+            <generator class="identity"/>
         </id>
         <property name="diagnostic"/>
         <property name="simptome"/>

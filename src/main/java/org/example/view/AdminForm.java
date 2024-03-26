@@ -3,14 +3,18 @@ package org.example.view;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
+import org.example.presenter.AdminPresenter;
 
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
 import javax.swing.text.StyleContext;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Locale;
 
 public class AdminForm implements InterfaceAdmin {
+    private AdminPresenter adminPresenter = null;
     private JPanel panel1;
     private JLabel iconLabel;
     private JTextArea vizualizareUtilizatoritextArea;
@@ -32,6 +36,105 @@ public class AdminForm implements InterfaceAdmin {
 // >>> IMPORTANT!! <<<
 // DO NOT EDIT OR ADD ANY CODE HERE!
         $$$setupUI$$$();
+    }
+
+    public AdminForm() {
+        adminPresenter = new AdminPresenter(this);
+        vizualizareUtilizatoriButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleViewAllUsers();
+            }
+        });
+        creareUtilizatorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleCreateUser();
+            }
+        });
+        actualizareUtilizatorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleUpdateUser();
+            }
+        });
+        stergereButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleDeleteUser();
+            }
+        });
+        LOGOUTButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleLogOut();
+            }
+        });
+    }
+
+    @Override
+    public void handleViewAllUsers() {
+        adminPresenter.handleViewAllUsers();
+    }
+
+    @Override
+    public void handleCreateUser() {
+        adminPresenter.handleCreateUser();
+    }
+
+    @Override
+    public void handleUpdateUser() {
+        adminPresenter.handleUpdateUser();
+    }
+
+    @Override
+    public void handleDeleteUser() {
+        adminPresenter.handleDeleteUser();
+    }
+
+    @Override
+    public void handleLogOut() {
+        adminPresenter.handleLogOut();
+    }
+
+    @Override
+    public JTextArea getVizualizareUtilizatoritextArea() {
+        return vizualizareUtilizatoritextArea;
+    }
+
+    @Override
+    public JTextField getUsernameCreareUtilizatorTextField() {
+        return usernameCreareUtilizatorTextField;
+    }
+
+    @Override
+    public JTextField getPasswordCreareUtilizatorTextField() {
+        return passwordCreareUtilizatorTextField;
+    }
+
+    @Override
+    public JTextField getTipUtilizatorCreareTextField() {
+        return tipUtilizatorCreareTextField;
+    }
+
+    @Override
+    public JTextField getIdUtilizatorUpdateTextField() {
+        return idUtilizatorUpdateTextField;
+    }
+
+    @Override
+    public JTextField getUsernameUtilizatorUpdateTextField() {
+        return usernameUtilizatorUpdateTextField;
+    }
+
+    @Override
+    public JTextField getPasswordUpdateUtilizatorTextField() {
+        return passwordUpdateUtilizatorTextField;
+    }
+
+    @Override
+    public JTextField getIdUtilizatorStergereTextField() {
+        return idUtilizatorStergereTextField;
     }
 
     @Override

@@ -68,6 +68,17 @@ public class MedicForm implements InterfaceMedic {
                 handleFilterByTratament();
             }
         });
+        LOGOUTButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                handleLogOutAction();
+            }
+        });
+    }
+
+    @Override
+    public void handleLogOutAction() {
+        medicPresenter.handleLogOutAction();
     }
 
     @Override

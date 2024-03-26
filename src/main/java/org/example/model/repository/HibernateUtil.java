@@ -8,31 +8,23 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import static org.example.utils.ExtensionFunctions.logDebug;
 
 /**
- * ofera o sesiune Hibernate configurata
- * ofera un mod simplu si reutilizabil de a accesa si gestiona sesiunile
- * Hibernate intr-o aplicatie Java, fara a fi nevoie sa se creeze o noua
- * instanta de SessionFactory in fiecare loc in care este necesara
- * o sesiune Hibernate
+ * Provides a configured Hibernate session
+ * Offers a simple and reusable way to access and manage Hibernate sessions in a Java application
+ * without needing to create a new instance of SessionFactory each time it's required
  */
 public class HibernateUtil {
-    /**
-     * utilizat pentru a crea sesiuni Hibernate si pentru a gestiona
-     * cache-ul, conexiunile la baza de date si alte resurse
-     */
+
     private static SessionFactory sessionFactory;
 
     /**
-     * daca obiectul sessionFactory nu este inca initializat, atunci
-     * se creeaza o noua instanta folosing configurarea implicita
-     * din fisierul hibernate.cfg.xml
-     *
-     * @return
+     * If the sessionFactory object is not yet initialized,
+     * then a new instance is created using the default configuration from the hibernate.cfg.xml file.
      */
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
-                // registru de servicii standard Hibernate -  creat utilizand builder
-                // configurarea este specificata in fisierul hibernate.cfg.xml
+
+                // The configuration is specified in the hibernate.cfg.xml file.
                 StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
                 sessionFactory = new MetadataSources(serviceRegistry).buildMetadata().buildSessionFactory();
             } catch (Exception e) {
@@ -42,13 +34,4 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-    /**
-     * se foloseste pentru testare
-     * permite setarea unui obiect SessionFactory personalizat
-     *
-     * @param sessionFactory
-     */
-    public static void setSessionFactory(SessionFactory sessionFactory) {
-        HibernateUtil.sessionFactory = sessionFactory;
-    }
 }

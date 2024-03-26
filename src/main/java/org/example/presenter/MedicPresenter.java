@@ -7,8 +7,10 @@ import org.example.model.repository.FisaMedicalaRepository;
 import org.example.utils.LoggedInUser;
 import org.example.utils.SessionManager;
 import org.example.view.InterfaceMedic;
+import org.example.view.Login;
 
-import java.util.ArrayList;
+import javax.swing.*;
+import java.util.HashSet;
 import java.util.List;
 
 public class MedicPresenter {
@@ -59,7 +61,7 @@ public class MedicPresenter {
         Integer idUserLoggedIn = loggedInUser.getIdUserLoggedIn();
         List<FisaMedicala> allFisaMedicala = fisaMedicalaRepository.allFisaMedicalaByMedicUserId(loggedInUser.getIdUserLoggedIn());
 
-        List<String> diagnostics = new ArrayList<>();
+        HashSet<String> diagnostics = new HashSet<>();
 
         for (FisaMedicala fisaMedicala : allFisaMedicala) {
             diagnostics.add(fisaMedicala.getDiagnostic());
@@ -76,7 +78,7 @@ public class MedicPresenter {
         Integer idUserLoggedIn = loggedInUser.getIdUserLoggedIn();
         List<FisaMedicala> allFisaMedicala = fisaMedicalaRepository.allFisaMedicalaByMedicUserId(loggedInUser.getIdUserLoggedIn());
 
-        List<String> trataments = new ArrayList<>();
+        HashSet<String> trataments = new HashSet<>();
         ;
         for (FisaMedicala fisaMedicala : allFisaMedicala) {
             trataments.add(fisaMedicala.getTratament());
@@ -111,5 +113,19 @@ public class MedicPresenter {
             interfaceMedic.getFiltrareTratamentTextArea().append("Numar Fisa: " + fisaMedicala.getIdFisaMedicala().toString() + "\n" + "Diagnostic: " + fisaMedicala.getDiagnostic() + ", Simptome: " +
                     fisaMedicala.getSimptome() + "\n" + ", Tratament: " + fisaMedicala.getTratament() + ", Varsta Pacient: " + fisaMedicala.getVarstaPacient().toString() + "\n" + "\n");
         }
+    }
+
+    public void handleLogOutAction() {
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(interfaceMedic.getPanel1());
+        frame.setVisible(false);
+        Login loginForm = new Login();
+        JFrame loginFrame = new JFrame("Login Form");
+        loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        loginFrame.getContentPane().add(loginForm.getPanel1()); // Add the JPanel from Login to the JFrame
+        loginFrame.setSize(700, 700);
+        loginFrame.setLocationRelativeTo(null); // Center the frame on the screen
+        loginFrame.setVisible(true); // Make the frame visible
+
+        SessionManager.logOutUser();
     }
 }
